@@ -8,6 +8,5 @@ def count_words(string):
 
     return word_count
 
-
 print(count_words("A man, a plan, a canal -- Panama"))
 print(count_words("Doo bee doo bee doo"))

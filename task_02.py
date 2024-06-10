@@ -1,5 +1,4 @@
 class Solution:
-
     def coincidence(self, List, Range):
         if not List or not Range:
             return []

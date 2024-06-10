@@ -1,5 +1,4 @@
 import string
-
 class Solution:
 
     def is_palindrome(self, s: str) -> bool:

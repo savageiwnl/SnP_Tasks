@@ -15,7 +15,6 @@ def connect_dicts(dict1, dict2):
 
     return sorted_dict
 
-
 print(connect_dicts({"a": 2, "b": 12}, {"c": 11, "e": 5}))
 print(connect_dicts({"a": 13, "b": 9, "d": 11}, {"c": 12, "a": 15}))
 print(connect_dicts({"a": 14, "b": 12}, {"c": 11, "a": 15}))

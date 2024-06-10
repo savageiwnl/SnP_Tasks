@@ -1,5 +1,4 @@
 class Solution:
-
     def max_odd(self, array: list):
         result = [x for x in array if isinstance(x, (int, float)) and x % 2 != 0]
         print(result)

@@ -14,7 +14,6 @@ class Solution:
             array.append(x)
             return array
 
-
 arr = [1, 2, 1, 3]
 sol = Solution()
 res = sol.sort_list(arr)

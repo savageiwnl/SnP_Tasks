@@ -1,4 +1,3 @@
-import re
 class Solution:
     def multiply_numbers(self, input_value):
         if isinstance(input_value, list):

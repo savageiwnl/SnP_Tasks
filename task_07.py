@@ -10,7 +10,6 @@ def combine_anagrams(words_array):
 
     return list(anagrams.values())
 
-
 # Пример использования
 words_array = ["cars", "for", "potatoes", "racs", "four", "scar", "creams", "scream"]
 print(combine_anagrams(words_array))

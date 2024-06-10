@@ -5,7 +5,6 @@ class WrongNumberOfPlayersError(Exception):
 class NoSuchStrategyError(Exception):
     pass
 
-
 def rps_game_winner(game):
     if len(game) != 2:
         raise WrongNumberOfPlayersError("WrongNumberOfPlayersError")

@@ -7,7 +7,6 @@ class Solution:
         future_date = current_date + timedelta(days=x)
         return future_date.strftime('%d-%m-%Y %H:%M:%S')
 
-
 sol = Solution()
 res = sol.date_in_future([])
 print(res)
