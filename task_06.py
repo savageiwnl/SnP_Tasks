@@ -5,6 +5,7 @@ class WrongNumberOfPlayersError(Exception):
 class NoSuchStrategyError(Exception):
     pass
 
+
 def rps_game_winner(game):
     if len(game) != 2:
         raise WrongNumberOfPlayersError("WrongNumberOfPlayersError")
@@ -17,10 +18,13 @@ def rps_game_winner(game):
         return (p1 == 'R' and p2 == 'S') or \
             (p1 == 'S' and p2 == 'P') or \
             (p1 == 'P' and p2 == 'R')
+
     if win(p1[1], p2[1]) or p1[1] == p2[1]:
-        return p1
-    else: return p2
+        return f"{p1[0]} {p1[1]}"
+    else:
+        return f"{p2[0]} {p2[1]}"
 
 
+# Example usage:
 game = [['player1', 'S'], ['player2', 'R']]
 print(rps_game_winner(game))
