@@ -5,7 +5,7 @@ class Dessert:
             self._calories = calories
         else:
             print("Калорийность должна быть числом")
-            self._calories = None  # Установите значение по умолчанию, которое указывает на ошибку
+            self._calories = None
 
     @property
     def name(self):
@@ -25,12 +25,12 @@ class Dessert:
             self._calories = value
         else:
             print("Калорийность должна быть числом")
-            self._calories = None  # Установите значение по умолчанию, которое указывает на ошибку
+            self._calories = None
 
     def is_healthy(self):
         if self._calories is not None:
             return self._calories < 200
-        return False  # Если калорийность не установлена, считаем десерт нездоровым
+        return False
 
     def is_delicious(self):
         return True
