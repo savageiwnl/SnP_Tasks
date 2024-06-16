@@ -1,7 +1,11 @@
 class Dessert:
     def __init__(self, name='', calories=0):
         self._name = name
-        self._calories = calories
+        if isinstance(calories, (int, float)):
+            self._calories = calories
+        else:
+            print("Калорийность должна быть числом")
+            self._calories = None  # Установите значение по умолчанию, которое указывает на ошибку
 
     @property
     def name(self):
@@ -17,19 +21,23 @@ class Dessert:
 
     @calories.setter
     def calories(self, value):
-        self._calories = value
+        if isinstance(value, (int, float)):
+            self._calories = value
+        else:
+            print("Калорийность должна быть числом")
+            self._calories = None  # Установите значение по умолчанию, которое указывает на ошибку
 
     def is_healthy(self):
-        return self._calories < 200
+        if self._calories is not None:
+            return self._calories < 200
+        return False  # Если калорийность не установлена, считаем десерт нездоровым
 
     def is_delicious(self):
         return True
 
 
-tiramisu = Dessert('Тирамису', 300)
+# Пример использования
+tiramisu = Dessert('Тирамису', 'sdfs')  # Некорректное значение калорийности
 waffles = Dessert('Вафли', 192)
-
-print(
-    f'Десерт: {tiramisu.name} Калорийность {tiramisu.calories} Здоровый ли {tiramisu.is_healthy()} Вкусный ли {tiramisu.is_delicious()}')
-print(
-    f'Десерт: {waffles.name} Калорийность {waffles.calories} Здоровый ли {waffles.is_healthy()} Вкусный ли {waffles.is_delicious()}')
+print(f'Десерт: {tiramisu.name} Калорийность {tiramisu.calories} Здоровый ли {tiramisu.is_healthy()} Вкусный ли {tiramisu.is_delicious()}')
+print(f'Десерт: {waffles.name} Калорийность {waffles.calories} Здоровый ли {waffles.is_healthy()} Вкусный ли {waffles.is_delicious()}')
