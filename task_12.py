@@ -1,11 +1,8 @@
 class Dessert:
     def __init__(self, name='', calories=0):
         self._name = name
-        if isinstance(calories, (int, float)):
-            self._calories = calories
-        else:
-            print("Калорийность должна быть числом")
-            self._calories = None
+        self._calories = calories
+
 
     @property
     def name(self):
@@ -28,12 +25,16 @@ class Dessert:
             self._calories = None
 
     def is_healthy(self):
-        if self._calories is not None:
+        if isinstance(self._calories, (int, float)):
             return self._calories < 200
-        return False
+        else: return None
 
     def is_delicious(self):
         return True
+
+    def __str__(self):
+        return f"{self._name} Калорийность: {self._calories}, Здоровый {self.is_healthy()}, Вкусный {self.is_delicious()}"
+
 
 
 class JellyBean(Dessert):
@@ -58,6 +59,7 @@ waffles = Dessert('Вафли', 192)
 
 jelly_bean = JellyBean('Желе', 50, 'black licorice')
 
+print(tiramisu)
 print(
     f'Десерт: {jelly_bean.name} Калорийность {jelly_bean.calories} Здоровый ли {jelly_bean.is_healthy()} Вкусный ли {jelly_bean.is_delicious()} ')
 print(

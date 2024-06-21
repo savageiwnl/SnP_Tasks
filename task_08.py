@@ -1,4 +1,6 @@
-def multiply_numbers(input_value):
+def multiply_numbers(input_value=None):
+    if not input_value:
+        return None
     if isinstance(input_value, list):
         product = 1
         for item in input_value:
@@ -18,6 +20,4 @@ def multiply_numbers(input_value):
             return None
 
 
-inputs = ([5, 60, 4])
-res = multiply_numbers(inputs)
-print(res)
+print(multiply_numbers())
