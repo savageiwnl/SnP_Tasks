@@ -54,15 +54,10 @@ class JellyBean(Dessert):
         return self._flavor != 'black licorice'
 
 
-tiramisu = Dessert('Тирамису', '300')
+tiramisu = Dessert('Тирамису', 300)
 waffles = Dessert('Вафли', 192)
 
-jelly_bean = JellyBean('Желе', 50, 'black licorice')
+jelly_bean = JellyBean('Желе', "sgsdg", 'black licorice')
 
+print(jelly_bean)
 print(tiramisu)
-print(
-    f'Десерт: {jelly_bean.name} Калорийность {jelly_bean.calories} Здоровый ли {jelly_bean.is_healthy()} Вкусный ли {jelly_bean.is_delicious()} ')
-print(
-    f'Десерт: {tiramisu.name} Калорийность {tiramisu.calories} Здоровый ли {tiramisu.is_healthy()} Вкусный ли {tiramisu.is_delicious()}')
-print(
-    f'Десерт: {waffles.name} Калорийность {waffles.calories} Здоровый ли {waffles.is_healthy()} Вкусный ли {waffles.is_delicious()}')
