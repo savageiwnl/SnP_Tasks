@@ -3,7 +3,6 @@ class Dessert:
         self._name = name
         self._calories = calories
 
-
     @property
     def name(self):
         return self._name
@@ -18,23 +17,22 @@ class Dessert:
 
     @calories.setter
     def calories(self, value):
-        if isinstance(value, (int, float)):
             self._calories = value
-        else:
-            print("Калорийность должна быть числом")
-            self._calories = None
+
 
     def is_healthy(self):
         if isinstance(self._calories, (int, float)):
             return self._calories < 200
-        else: return None
+        else:
+            return 'не определить'
 
     def is_delicious(self):
         return True
 
     def __str__(self):
-        return f"{self._name} Калорийность: {self._calories}, Здоровый {self.is_healthy()}, Вкусный {self.is_delicious()}"
+        return f"{self._name} Калорийность: {self._calories}, Здоровый десерт {self.is_healthy()}, Вкусный десерт {self.is_delicious()}"
+
 
 # Пример использования
-tiramisu = Dessert('Тирамису', 'test_name2')  # Калорийность задана строкой
+tiramisu = Dessert('Тирамису', "100ff")  # Калорийность задана строкой
 print(tiramisu)  # Выведет: Тирамису (Калорийность: 200.0)
