@@ -1,4 +1,4 @@
-def coincidence(List, Range):
+def coincidence(List=None, Range=None):
     if not List or not Range:
         return []
     start, stop = Range.start, Range.stop
@@ -7,4 +7,4 @@ def coincidence(List, Range):
     return result
 
 
-print(coincidence([None, 1, 'foo', 4, 2, 2.5], range(1, 4)))
+print(coincidence())
