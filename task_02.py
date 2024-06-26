@@ -1,9 +1,10 @@
-def coincidence(List=None, Range=None):
+def coincidence(List, Range):
     if not List or not Range:
         return []
-    result = [x for x in List if isinstance(x, (int, float)) and Range[0] <= x <= Range[2]]
+    start, stop = Range.start, Range.stop
+    result = [x for x in List if isinstance(x, (int, float)) and start <= x < stop]
     result.sort()
     return result
 
 
-print(coincidence([1, 2, 3, 4, 5], range(3, 6)))
+print(coincidence([None, 1, 'foo', 4, 2, 2.5], range(1, 4)))
